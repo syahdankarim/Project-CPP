@@ -1,0 +1,147 @@
+
+    cout<< "Welcome to the book store!" << endl;
+    bool member;
+    int x;
+    cout << "0 = NO" <<endl;
+    cout << "1 = YES" <<endl;
+    cout << "Are you a member? (0/1) = ";
+    cin >> member;
+    if (member == 1) {
+       cout << "Mendapatkan diskon 15%" << endl;
+       cout << "Enter member ID ";
+       cin >> x;
+       if (x==1) {
+        cout << "Ani"<< endl;
+       }
+       else if (x==2) {
+        cout << "Budi"<< endl;
+       }
+       else if (x==3) {
+        cout << "Wati"<< endl;
+       }
+       else if (x>3) {
+        cout << "You no a member"<< endl;
+       }
+    }
+    else {
+        cout << "Mendapatkan diskon 5%" << endl;
+    }
+
+    int y;
+    cout << "Enter bookID (1-5) = ";
+    cin >> y;
+    if (y == 1) {
+        cout << "Harry Potter = 250.000"<< endl;
+    }
+    else if (y == 2) {
+        cout << "Algorithm = 85.000"<< endl;
+    }
+    else if (y == 3) {
+        cout << "Calculus = 130.000"<< endl;
+    }
+    else if (y == 4) {
+        cout << "Sherlok Homles = 270.000"<< endl;
+    }
+    else {
+        cout << "Supernova = 180.000"<< endl;
+    }
+
+    cout << x << " is buying " << y << 
+
+    // member
+    int member;
+    char memberr;
+    string membername;
+
+    // DATA BUKU
+    int bookid;
+    int harga;
+    string title;
+
+    // TRANSAKSI
+    double cash;
+    int change;
+    double discount;
+    double totalharga;
+
+    cout << "Welcome to the book store" << endl;
+
+    cout <<  "Are you member? (y/n): ";
+    cin >> memberr;
+
+    if (memberr == 'y' || member == 'Y') {
+        cout << "Enter memberID = ";
+        cin >> member;
+        
+        if (memberr == 1) {
+            membername = "Ani";
+        }
+        else if (member == 2) {
+            membername = "Budi";
+        }
+        else if (member == 3) {
+            membername = "Budi";
+        }
+        else {
+            cout << "Invalid member ID!" << endl;
+            return 0;
+        }
+
+        discount = 0.15;
+    }
+    else {
+        membername = "Guest";
+        discount = 0.05;
+    }
+
+    cout << "Enter book ID = ";
+    cin >> bookid;
+
+    if (bookid == 1) {
+        title = "Harry Potter";
+        harga = 250000;
+    }
+    else if (bookid == 2) {
+        title = "Algoritma";
+        harga = 85000;
+    }
+    else if (bookid == 3) {
+        title = "Calculus";
+        harga = 130000;
+    }
+    else if (bookid == 4) {
+        title = "Sherlock Holems";
+        harga = 270000;
+    }
+    else if (bookid == 5) {
+        title = "Supernova";
+        harga = 180000;
+    }
+    else {
+        cout << "Invalid book ID" <<endl;
+        return 0;
+    }
+
+    // menghitung total harga setelah diskon
+    totalharga = harga - (harga * discount);
+
+    cout << endl;
+    cout << membername << " is buying "
+         << title << " for "
+         << totalharga << " IDR" << endl;
+
+    cout << "Insert cash: ";
+    cin >> cash;
+
+    // MENGECEK UANG
+    if (cash < totalharga) {
+        cout << "Insufficient money!" << endl;
+    }
+     else {
+        change = cash - totalharga;
+
+        cout << "Money given: " << cash
+             << ", Change: " << change << endl;
+
+        cout << "Thank you for shopping with us!" << endl;
+    }
